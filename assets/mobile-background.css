@@ -16,7 +16,7 @@
     filter: blur(0.9px);
   }
 
-  body.reading-page {
+  body.reading-page--dimmed {
     --mobile-background-shade: linear-gradient(rgba(4, 12, 28, 0.54), rgba(4, 12, 28, 0.60));
   }
 
@@ -35,5 +35,10 @@
   .reading-page .support-content {
     font-weight: 400;
     opacity: 1;
+  }
+
+  .reading-page .letter-content,
+  .reading-page .privacy-content {
+    text-shadow: 0 1px 2px rgba(4, 12, 28, 0.9), 0 0 8px rgba(4, 12, 28, 0.55);
   }
 }
