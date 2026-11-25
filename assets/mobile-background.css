@@ -11,13 +11,8 @@
     min-height: calc(100lvh + 6px);
     z-index: -1;
     pointer-events: none;
-    background: var(--mobile-background-shade, linear-gradient(transparent, transparent)),
-      url("bg-mobile.png") center / cover no-repeat;
+    background: url("bg-mobile.png") center / cover no-repeat;
     filter: blur(0.9px);
-  }
-
-  body.reading-page--dimmed {
-    --mobile-background-shade: linear-gradient(rgba(4, 12, 28, 0.54), rgba(4, 12, 28, 0.60));
   }
 
   .reading-page .nav-bar {
