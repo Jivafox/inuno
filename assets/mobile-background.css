@@ -1,0 +1,39 @@
+@media (max-width: 768px) {
+  body {
+    isolation: isolate;
+    background: #152747;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: -3px;
+    min-height: calc(100lvh + 6px);
+    z-index: -1;
+    pointer-events: none;
+    background: var(--mobile-background-shade, linear-gradient(transparent, transparent)),
+      url("bg-mobile.png") center / cover no-repeat;
+    filter: blur(0.9px);
+  }
+
+  body.reading-page {
+    --mobile-background-shade: linear-gradient(rgba(4, 12, 28, 0.54), rgba(4, 12, 28, 0.60));
+  }
+
+  .reading-page .nav-bar {
+    position: static;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .reading-page .main-content {
+    margin-top: 36px;
+  }
+
+  .reading-page .letter-content,
+  .reading-page .privacy-content,
+  .reading-page .support-content {
+    font-weight: 400;
+    opacity: 1;
+  }
+}

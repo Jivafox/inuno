@@ -24,12 +24,6 @@
       flex-direction: column;
       align-items: center;
     }
-    @media (max-width: 768px) {
-      body {
-        background-image: url('assets/bg-mobile.png');
-        background-attachment: scroll;
-      }
-    }
     .nav-bar {
       position: fixed;
       top: 32px;
@@ -155,8 +149,9 @@
       }
     }
   </style>
+  <link rel="stylesheet" href="assets/mobile-background.css">
 </head>
-<body>
+<body class="reading-page">
   <div class="nav-bar">
     <div class="nav-btns">
       <a href="index.html" class="nav-btn">HOME</a>
