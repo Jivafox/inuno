@@ -2,6 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Documents</title>
   <link rel="icon" href="assets/favicon.png" type="image/png">
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
@@ -27,6 +28,7 @@
     @media (max-width: 768px) {
       body {
         background-image: url('assets/bg-mobile.png');
+        background-attachment: scroll;
       }
     }
     .main-logo {
@@ -97,7 +99,8 @@
       transform: scale(1.1) rotate(8deg);
       z-index: 2;
     }
-    .doc-item:hover .doc-link {
+    .doc-item:hover .doc-link,
+    .doc-item:focus-within .doc-link {
       opacity: 1;
       visibility: visible;
       transform: translateY(0);
@@ -154,6 +157,32 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+    }
+    @media (max-width: 768px) {
+      .main-content {
+        box-sizing: border-box;
+        padding-inline: 20px;
+      }
+      .section-title {
+        margin-bottom: 40px;
+      }
+      .doc-list {
+        gap: 36px;
+        margin-bottom: 42px;
+      }
+      .contact-section {
+        margin-top: 40px;
+      }
+      .contact-title {
+        margin-bottom: 20px;
+      }
+    }
+    @media (max-width: 768px), (hover: none) {
+      .doc-link {
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+      }
     }
   </style>
 </head>
